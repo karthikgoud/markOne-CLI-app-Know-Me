@@ -7,7 +7,7 @@ console.log("Hi "+userName+", Welcome!. Do you know Karthik?")
 
 // initialize score to zero.
 
-score = 0;
+var score = 0;
 
 // function for reading and checking user answer.
 
