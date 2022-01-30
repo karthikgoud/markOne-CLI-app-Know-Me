@@ -63,3 +63,6 @@ for ( var i=0;i<questions.length;i++){
 console.log("Grand total score: "+score);
 
 
+// link of playing live
+
+// https://replit.com/@karthikgoud5/markOne-CLI-portfolio-KnowMe?embed=1&output=1
