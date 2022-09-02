@@ -1,13 +1,14 @@
 
-readlineSync = require("readline-sync"); //call package to read console.
+let readlineSync = require("readline-sync"); //call package to read console.
+const chalk = require("chalk")
 
 // getting username and printing welcome message on console.
-console.log("Welcome to Quiz")
+console.log(chalk.green.bold("Welcome to Quiz"))
 console.log("")
 var userName = readlineSync.question("Please enter your name: ");
 console.log("")
-console.log("Hi " + userName + ", Welcome.")
-console.log("Lets check how much you know about your friend 'KARTHIK'?")
+console.log("Hi " + chalk.magentaBright.bold(userName.toUpperCase()) + ", Welcome.")
+console.log("Lets check how much you know about your friend " + chalk.yellowBright.bold('KARTHIK') + "?")
 
 // initialize score to zero.
 
@@ -20,16 +21,16 @@ function playQuiz(question, answer) {
   var userAnswer = readlineSync.question(question).toLowerCase();
   if (userAnswer === answer) {
     console.log("")
-    console.log("You`re correct");
+    console.log(chalk.green.bold("You`re correct"));
     score = score + 1;
   } else {
     console.log("")
-    console.log("You`re wrong");
-    console.log("Right answer ---> " + answer);
+    console.log(chalk.red.bold("You`re wrong"));
+    console.log(chalk.blue.bold("Right answer ---> " + answer));
     score = score;
   }
   console.log("")
-  console.log("You`re total score = " + score);
+  console.log(chalk.magenta.bold("You`re total score = " + score));
   console.log("------------****---------------")
 }
 
@@ -40,44 +41,44 @@ function playQuiz(question, answer) {
 // question and answer- array of objects 
 
 var questions = [{
-  question: "where does Karthik live? ",
-  answer: "ballari"
+  question: " Q1: Where does Karthik live? \n \n" + "a:" + "Mumbai \n" + "b:" + "Bangalore \n" + "c:" + "Ballari \n" + "d:" + "Mysore \n",
+  answer: "c"
 },
 {
-  question: "Who is karthik`s favorite superhero? ",
-  answer: "ironman"
+  question: " Q2: Who is karthik`s favorite superhero? \n \n" + "a:" + "Batman \n" + "b:" + "Ironman \n" + "c:" + "Superman \n" + "d:" + "Spyder man \n",
+  answer: "b"
 },
 {
-  question: "which is karthik`s favorite color? ",
-  answer: "blue"
+  question: "Q3: Which is karthik`s favorite color? \n \n" + "a:" + "Red \n" + "b:" + "Green \n" + "c:" + "Black \n" + "d:" + "Blue \n",
+  answer: "d"
 },
 {
-  question: "which is karthik`s favorite sports? ",
-  answer: "football"
+  question: "Q4: Which is karthik`s favorite sports? \n \n" + "a:" + "Cricket \n" + "b:" + "Volleyball \n" + "c:" + "Football \n" + "d:" + "Tennis \n",
+  answer: "c"
 },
 {
-  question: "which is karthik`s favorite car? ",
-  answer: "tesla"
+  question: "Q5: Which is karthik`s favorite car? \n \n" + "a:" + "Honda Civic \n" + "b:" + "XUV700 \n" + "c:" + "Toyota Fortuner \n" + "d:" + "Tata Harrier \n",
+  answer: "d"
 },
 {
-  question: "what did karthik studied?",
-  answer: "mechanical engineer"
+  question: "Q6: What did karthik studied? \n \n" + "a:" + "Doctor  \n" + "b:" + "Engineer \n" + "c:" + "CA \n" + "d:" + "MBA  \n",
+  answer: "b"
 },
 {
-  question: "Where does karthik work (city)? ",
-  answer: "bangalore"
+  question: "Q7: Where does karthik work (city)?  \n \n" + "a:" + "Hydrabad \n" + "b:" + "Chennai \n" + "c:" + "Pune  \n" + "d:" + "Bangalore \n",
+  answer: "d"
 },
 {
-  question: "Does karthik have siblings? ",
-  answer: "yes"
+  question: "Q8: Does karthik have siblings? \n \n" + "a:" + "No \n" + "b:" + "Yes \n",
+  answer: "b"
 },
 {
-  question: "Which country does karthik live? ",
-  answer: "india"
+  question: "Q9: Which country does karthik live?  \n \n" + "a:" + "India \n" + "b:" + "USA \n" + "c:" + "Germany  \n" + "d:" + "Canada \n",
+  answer: "a"
 },
 {
-  question: "which state does karthik belong to? ",
-  answer: "karnataka"
+  question: "Q10: Which state does karthik belong to?  \n \n" + "a:" + "Andra pradesh \n" + "b:" + "U.P \n" + "c:" + "Kerala  \n" + "d:" + "Karnataka \n",
+  answer: "d"
 }
 ]
 
@@ -88,6 +89,6 @@ for (var i = 0; i < questions.length; i++) {
   playQuiz(currentQuestion.question, currentQuestion.answer);
 }
 
-console.log("Grand total score: " + score);
+console.log(chalk.yellowBright.bold("Grand total score: " + score));
 
 
