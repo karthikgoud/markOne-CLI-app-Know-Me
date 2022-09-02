@@ -1,10 +1,13 @@
-console.log("index")
+
 readlineSync = require("readline-sync"); //call package to read console.
 
 // getting username and printing welcome message on console.
-
-var userName = readlineSync.question("Enter your name: ");
-console.log("Hi " + userName + ", Welcome!. Do you know Karthik?")
+console.log("Welcome to Quiz")
+console.log("")
+var userName = readlineSync.question("Please enter your name: ");
+console.log("")
+console.log("Hi " + userName + ", Welcome.")
+console.log("Lets check how much you know about your friend 'KARTHIK'?")
 
 // initialize score to zero.
 
@@ -13,15 +16,19 @@ var score = 0;
 // function for reading and checking user answer.
 
 function playQuiz(question, answer) {
+  console.log("")
   var userAnswer = readlineSync.question(question).toLowerCase();
   if (userAnswer === answer) {
+    console.log("")
     console.log("You`re correct");
     score = score + 1;
   } else {
+    console.log("")
     console.log("You`re wrong");
-    console.log("Right answer: " + answer);
+    console.log("Right answer ---> " + answer);
     score = score;
   }
+  console.log("")
   console.log("You`re total score = " + score);
   console.log("------------****---------------")
 }

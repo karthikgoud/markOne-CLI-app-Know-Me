@@ -1,4 +1,4 @@
-console.log("dumm1")
+
 readlineSync = require("readline-sync"); //call package to read console.
 
 // getting username and printing welcome message on console.
