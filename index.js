@@ -1,11 +1,10 @@
-console.log("TO PLAY QUIZ: Click on 'play' button top right corner.")
-console.log("----")
+console.log("click 'play' buttom in top right corner.")
 
 readlineSync = require("readline-sync"); //call package to read console.
 
 // getting username and printing welcome message on console.
 
-var userName = readlineSync.question("Please enter your name: ");
+var userName = readlineSync.question("Enter username: ");
 console.log("Hi " + userName + ", Welcome!. Do you know Karthik?")
 
 // initialize score to zero.
@@ -85,6 +84,4 @@ for (var i = 0; i < questions.length; i++) {
 
 console.log("Grand total score: " + score);
 
-// link of playing live
 
-// https://replit.com/@karthikgoud5/markOne-CLI-portfolio-KnowMe?embed=1&output=1
