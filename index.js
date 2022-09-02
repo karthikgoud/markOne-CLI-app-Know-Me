@@ -10,6 +10,10 @@ console.log("")
 console.log("Hi " + chalk.magentaBright.bold(userName.toUpperCase()) + ", Welcome.")
 console.log("Lets check how much you know about your friend " + chalk.yellowBright.bold('KARTHIK') + "?")
 
+console.log("")
+
+console.log("Instruction: Type" + chalk.red.bold(" a / b / c / d ") + "to answer.")
+
 // initialize score to zero.
 
 var score = 0;
