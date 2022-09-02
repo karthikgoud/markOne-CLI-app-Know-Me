@@ -1,6 +1,4 @@
-console.log("TO PLAY QUIZ: Click on 'play' button top right corner.")
-console.log("----")
-
+console.log("dumm1")
 readlineSync = require("readline-sync"); //call package to read console.
 
 // getting username and printing welcome message on console.

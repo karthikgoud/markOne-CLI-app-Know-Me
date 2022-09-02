@@ -1,10 +1,9 @@
-console.log("click 'play' buttom in top right corner.")
-
+console.log("index")
 readlineSync = require("readline-sync"); //call package to read console.
 
 // getting username and printing welcome message on console.
 
-var userName = readlineSync.question("Enter username: ");
+var userName = readlineSync.question("Enter your name: ");
 console.log("Hi " + userName + ", Welcome!. Do you know Karthik?")
 
 // initialize score to zero.
