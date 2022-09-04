@@ -8,11 +8,14 @@ console.log("")
 var userName = readlineSync.question("Please enter your name: ");
 console.log("")
 console.log("Hi " + chalk.magentaBright.bold(userName.toUpperCase()) + ", Welcome.")
+console.log("")
 console.log("Lets check how much you know about your friend " + chalk.yellowBright.bold('KARTHIK') + "?")
 
 console.log("")
 
-console.log("Instruction: Type" + chalk.red.bold(" a / b / c / d ") + "to answer.")
+console.log(chalk.red.bold("Instruction") + ": Type" + chalk.red.bold(" a / b / c / d ") + "to answer.")
+console.log("")
+console.log(chalk.red.bold("Points") + ": No negative points for wrong answer.")
 
 // initialize score to zero.
 
@@ -93,6 +96,6 @@ for (var i = 0; i < questions.length; i++) {
   playQuiz(currentQuestion.question, currentQuestion.answer);
 }
 
-console.log(chalk.yellowBright.bold("Grand total score: " + score));
+console.log(chalk.yellow.bgBlackBright.bold("Grand total score: " + score));
 
 
